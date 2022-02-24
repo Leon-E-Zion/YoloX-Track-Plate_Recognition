@@ -1,4 +1,4 @@
-# Leon-YoloX-Track-Plate_Recognitio
+# Leon-YoloX-Track-Plate_Recognition
 
 ### 项目整体：
 
