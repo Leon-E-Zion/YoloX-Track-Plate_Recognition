@@ -35,7 +35,9 @@ def plot_bboxes(image, bboxes, line_thickness=None):
     for (x1, y1, x2, y2, cls_id, pos_id) in bboxes:
         if cls_id in ['person']:
             color = (0, 0, 255)
+        # 'car' or'truck' or 'bus'
         else:
+            cls_id = 'Traffic Tools'
             color = (0, 255, 0)
         c1, c2 = (x1, y1), (x2, y2)
         cv2.rectangle(image, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
@@ -99,11 +101,23 @@ def update_tracker(target_detector, image):
     bboxes2draw = []
     face_bboxes = []
     current_ids = []
+    bboxes_mes  = []
+    figures     = []
     # 将 追踪器的输出 进行 重整 收集
     for value in list(outputs):
-        x1, y1, x2, y2, cls_, track_id = value
-        bboxes2draw.append((x1, y1, x2, y2, cls_, track_id))
-        current_ids.append(track_id)
+        x1, y1, x2, y2, cls_, track_id,car_num = value
+        show_mes = "{}{}".format(track_id,car_num)
+        # print('show_mes:{}'.format(show_mes))
+        bboxes2draw.append(
+            (x1, y1, x2, y2, cls_, show_mes)
+        )
+        current_ids.append([track_id,car_num])
+        if not track_id in target_detector.faceTracker:
+            target_detector.faceTracker[track_id] = 0
+            face = image[y1:y2, x1:x2]
+            new_faces.append([face, track_id])#--------------------------注意
+        face_bboxes.append((x1, y1, x2, y2))
+        bboxes_mes.append([x1, y1, x2, y2,int(track_id),cls_,car_num])
     # ============================================================
 
     # ============================================================
@@ -112,14 +126,16 @@ def update_tracker(target_detector, image):
     for history_id in target_detector.faceTracker:
         if not history_id in current_ids:
             target_detector.faceTracker[history_id] -= 1
-        if target_detector.faceTracker[history_id] < -5:
+        if target_detector.faceTracker[history_id] < -40:
             ids2delete.append(history_id)
     # ============================================================
 
     # ================================================
     # ID 丢失 反馈部分
+    passer_num = 0
     for ids in ids2delete:
         target_detector.faceTracker.pop(ids)
+        passer_num+=1
         print('-[INFO] Delete track id:', ids)
     # ================================================
 
@@ -129,5 +145,5 @@ def update_tracker(target_detector, image):
     # ================================================
 
 
-    return image, new_faces, face_bboxes
+    return image, new_faces, face_bboxes,bboxes_mes,passer_num
 # ==============================================================================================================================
