@@ -15,7 +15,7 @@ def confidence_filter(result, confidence):
 def confidence_filter_cls(result, confidence):
     max_scores = torch.max(result[:,:,5:25], 2)[0]
     res = torch.cat((result, max_scores),2)
-    # print(res.shape)
+    print(res.shape)
     
     
     cond_1 = (res[:,:,4] > confidence).float()

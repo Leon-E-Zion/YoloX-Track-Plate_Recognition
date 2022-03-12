@@ -41,9 +41,7 @@ class baseDet(object):
         retDict = {'frame': None,
                    'faces': None,
                    'list_of_ids': None,
-                   'face_bboxes': [],
-                   'bboxes_mes':[],
-                   'passer_num':None}
+                   'face_bboxes': []}
         # ==============================
 
         # ========================
@@ -53,7 +51,7 @@ class baseDet(object):
 
         # ==============================================================
         # 获取 图片分析器的 输出 ==> 这里的输出 是 包含之后可以直接 展示的图片
-        im, tar_figures, tar_bboxes,bboxes_mes,passer_num = update_tracker(self, im)
+        im, faces, face_bboxes = update_tracker(self, im)
         # ==============================================================
 
         # =============================================================================
@@ -61,11 +59,9 @@ class baseDet(object):
         # 这是处理好后 可以直接展示的原图
         retDict['frame'] = im
         # 将 检测器得到的 各个框 进行收集
-        retDict['tar_bboxes_mes'] = tar_bboxes
+        retDict['face_bboxes'] = face_bboxes
         # 将 检测器得到的 各个框 进行收集  依据他们在原图上将 框中的内容抠出来 合并到一起 ==> faces
-        retDict['tar_figures'] =  tar_figures
-        retDict['bboxes_mes'] = bboxes_mes
-        retDict['passer_num'] = passer_num
+        retDict['faces'] = faces
         # =============================================================================
 
         # 数据返回
