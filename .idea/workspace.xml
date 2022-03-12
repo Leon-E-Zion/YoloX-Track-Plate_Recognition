@@ -22,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Leon-YoloX-DeepSort-Plate_Recognition" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="25TKhx391lp0FXCZvVCsrvQLXQx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -130,6 +130,7 @@
       <workItem from="1645669829249" duration="1242000" />
       <workItem from="1645677106160" duration="1384000" />
       <workItem from="1645678929959" duration="15000" />
+      <workItem from="1647074454934" duration="321000" />
     </task>
     <servers />
   </component>
@@ -137,7 +138,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$demo.coverage" NAME="demo Coverage Results" MODIFIED="1645678937072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$demo.coverage" NAME="demo Coverage Results" MODIFIED="1647074771895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/yolox_deepsort_main$plateRecognition.coverage" NAME="plateRecognition Coverage Results" MODIFIED="1645550842572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlateRecognition" />
     <SUITE FILE_PATH="coverage/yolox_deepsort_main$demo.coverage" NAME="demo Coverage Results" MODIFIED="1645678459230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
