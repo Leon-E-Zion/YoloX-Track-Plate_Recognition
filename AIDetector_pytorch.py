@@ -9,16 +9,7 @@ from yolox.utils import fuse_model
 from yolox.data.datasets import COCO_CLASSES
 import math
 
-def estimateSpeed(location1, location2, fps):
-    d_pixels = math.sqrt(math.pow(location2[0] - location1[0], 2) + math.pow(location2[1] - location1[1], 2))
-    # ppm = location2[2] / carWidht
-    ppm = 10                          #$$$$
-    d_meters = d_pixels / ppm
-    #print("d_pixels=" + str(d_pixels), "d_meters=" + str(d_meters))
-    #fps = 10#$$$$
-    print(fps)
-    speed = d_meters * 10 * 3.6 #3600/1000
-    return speed
+
 
 def select_device(device='', batch_size=None):
     # device = 'cpu' or '0' or '0,1,2,3'
@@ -48,9 +39,9 @@ class Detector(baseDet):
         self.build_config()
         self.mdepth = 0.33
         self.mwidth = 0.50
-        self.confthre=0.5
-        self.nmsthre=0.65
-        self.test_size=(640, 640)
+        self.confthre=0.6
+        self.nmsthre=0.1
+        self.test_size=(640,640)
         self.rgb_means = (0.485, 0.456, 0.406)
         self.std = (0.229, 0.224, 0.225)
         self.init_model()
@@ -129,8 +120,8 @@ class Detector(baseDet):
             lbl = self.names[int(cls_ids[i])]
 
 
-            if lbl == 'truck' or 'bus':
-                lbl = 'car'
+            # if lbl == 'truck' or 'bus':
+            #     lbl = 'car'
 
 
             conf = scores[i]
