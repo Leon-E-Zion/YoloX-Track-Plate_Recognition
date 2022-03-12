@@ -41,6 +41,7 @@ def xyxy2cxcywh(bboxes):
     bboxes[:, 0] = bboxes[:, 0] + bboxes[:, 2] * 0.5
     bboxes[:, 1] = bboxes[:, 1] + bboxes[:, 3] * 0.5
     return bboxes
+<<<<<<< HEAD
 
 
 def get_center(bbox):
@@ -65,3 +66,5 @@ def box_smaller(box):
 
     return box
 
+=======
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f

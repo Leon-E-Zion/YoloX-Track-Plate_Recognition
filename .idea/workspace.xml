@@ -70,6 +70,31 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leon_utils/data_note.py" />
+<<<<<<< HEAD
+=======
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="yolox-deepsort-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$ - 副本" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$ - 副本/demo.py" />
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -100,7 +125,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="direction_get" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="machine_predict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
       <module name="yolox-deepsort-main" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,7 +142,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leon_utils/direction_get.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leon_utils/machine_predict.py" />
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,7 +155,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="line_detect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
       <module name="yolox-deepsort-main" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,6 +172,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leon_utils/line_detect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -157,6 +195,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+=======
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leon_utils/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -169,10 +209,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.demo" />
+<<<<<<< HEAD
         <item itemvalue="Python.test" />
         <item itemvalue="Python.direction_get" />
         <item itemvalue="Python.line_detect" />
         <item itemvalue="Python.data_note" />
+=======
+        <item itemvalue="Python.data_note" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.machine_predict" />
+        <item itemvalue="Python.demo (1)" />
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
       </list>
     </recent_temporary>
   </component>
@@ -202,9 +249,13 @@
       <workItem from="1646298906175" duration="4698000" />
       <workItem from="1646306411899" duration="5499000" />
       <workItem from="1646315500992" duration="3978000" />
+<<<<<<< HEAD
       <workItem from="1646627283870" duration="599000" />
       <workItem from="1646976192619" duration="14151000" />
       <workItem from="1646990586759" duration="143000" />
+=======
+      <workItem from="1646320827997" duration="51000" />
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
     </task>
     <servers />
   </component>
@@ -212,6 +263,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$line_detect.coverage" NAME="line_detect Coverage Results" MODIFIED="1646978286154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$whether.coverage" NAME="whether Coverage Results" MODIFIED="1646125583555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$test.coverage" NAME="test Coverage Results" MODIFIED="1646990060450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
@@ -221,10 +273,24 @@
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$demo.coverage" NAME="demo Coverage Results" MODIFIED="1646990596343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$wh_improve.coverage" NAME="wh_improve Coverage Results" MODIFIED="1646135903094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
     <SUITE FILE_PATH="coverage/yolox_deepsort_main$plateRecognition.coverage" NAME="plateRecognition Coverage Results" MODIFIED="1645550842572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlateRecognition" />
+=======
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$whether.coverage" NAME="whether Coverage Results" MODIFIED="1646125583555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$test.coverage" NAME="test Coverage Results" MODIFIED="1646233853195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$machine_predict.coverage" NAME="machine_predict Coverage Results" MODIFIED="1646232519599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
+    <SUITE FILE_PATH="coverage/yolox_deepsort_main$demo.coverage" NAME="demo Coverage Results" MODIFIED="1645678459230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$demo__1_.coverage" NAME="demo (1) Coverage Results" MODIFIED="1646151391472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../YoloX-Track-Plate_Recognition - 副本" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$demo.coverage" NAME="demo Coverage Results" MODIFIED="1646317843897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$wh_improve.coverage" NAME="wh_improve Coverage Results" MODIFIED="1646135903094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
+    <SUITE FILE_PATH="coverage/yolox_deepsort_main$plateRecognition.coverage" NAME="plateRecognition Coverage Results" MODIFIED="1645550842572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlateRecognition" />
+    <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition_More_Modules$demo.coverage" NAME="demo Coverage Results" MODIFIED="1646320839599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$data_note.coverage" NAME="data_note Coverage Results" MODIFIED="1646239472296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$traffic_utils.coverage" NAME="traffic_utils Coverage Results" MODIFIED="1646132535705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$utils_leon.coverage" NAME="utils_leon Coverage Results" MODIFIED="1646125730927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$clime.coverage" NAME="clime Coverage Results" MODIFIED="1646133628918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/YoloX_Track_Plate_Recognition$direction_get.coverage" NAME="direction_get Coverage Results" MODIFIED="1646987125614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leon_utils" />
+=======
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
   </component>
 </project>

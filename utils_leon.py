@@ -41,9 +41,13 @@ from leon_utils.draw_ import draw_new
 # 框格处理模块
 from leon_utils.bbox_change import *
 # ========================================================|
+<<<<<<< HEAD
 # 线检测模块
 from leon_utils.line_detect import *
 # 方向获取模块
 from leon_utils.direction_get import get_direction,direction_ajust
+=======
+
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
 
 

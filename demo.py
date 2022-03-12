@@ -9,6 +9,10 @@ from utils_leon import *
 import os
 # ========================================================================|
 class Leon_detect():
+<<<<<<< HEAD
+=======
+
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
     def __init__(self):
         # ===========================================|
         # ===========================================|
@@ -21,7 +25,11 @@ class Leon_detect():
         # ------------根路径 运行环境 √----------------
         self.root = os.getcwd()
         # --------------跳帧参数 √--------------------
+<<<<<<< HEAD
         self.fps_skip = 1
+=======
+        self.fps_skip = 4
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
         # ===========================================|
         # ===========================================|
         # |--|
@@ -33,7 +41,11 @@ class Leon_detect():
         # |图像分析的函数的一些参数|
         # =====================
         # -----------------过往流量记录 时间间隔  单位 s----------------
+<<<<<<< HEAD
         self.passer_note_time = 100000
+=======
+        self.passer_note_time = 10
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
         # ----------------保存的图像的大小尺寸----------------
         self.height = 500
         # ----------------测速函数----------------
@@ -61,11 +73,14 @@ class Leon_detect():
         self.csv_root_train = os.path.join(self.root, 'train.csv')
         self.csv_root_pre = os.path.join(self.root, 'pre.csv')
         self.pre_mes = []
+<<<<<<< HEAD
         # 画线
         self.line = []
         # 逆行检测
         self.old_boxes = None
         self.tar_area_boxes = []
+=======
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
     # =========================================================================|
     # =========================================================================|
     # |--|
@@ -78,6 +93,7 @@ class Leon_detect():
     # |--|
     # =========================================================================|
     # =========================================================================|
+<<<<<<< HEAD
     def line_get_(self,im):
         self.line_img = im
         line = line2get2plot(self.line_img)
@@ -90,6 +106,8 @@ class Leon_detect():
             self.tar_area_boxes.append(int(num))
     # =========================================================================|
     # =========================================================================|
+=======
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
     # |天气模块|
     # ========
     # ---------------------------获取天气--------------------------
@@ -143,7 +161,11 @@ class Leon_detect():
         # |--|
         # ==============================|
         # 关于帧率的控制 参数
+<<<<<<< HEAD
         pic_i = 0
+=======
+        i = 0
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
         # 控制 机器学习 预测部分的参数
         i_= 0
         # ==============================|
@@ -158,6 +180,7 @@ class Leon_detect():
             # 逐张地获取图片
             _, im = cap.read()
             # =====================
+<<<<<<< HEAD
             if pic_i == 0:
                 #
                 self.line_get_(im)
@@ -168,6 +191,8 @@ class Leon_detect():
 
             # 获取线条 --> [908, 283, 1497, 312]
             # =====================
+=======
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
             # |--|
             # |--|
             # 光照提升
@@ -178,8 +203,13 @@ class Leon_detect():
             # |--|
             # =================================================
             # 跳帧处理
+<<<<<<< HEAD
             pic_i += 1
             if pic_i % self.fps_skip != 0:
+=======
+            i += 1
+            if i % self.fps_skip != 0:
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
                 continue
             if im is None:
                 break
@@ -190,6 +220,7 @@ class Leon_detect():
             # |机器学习预测|
             # ===========
             # 时间函数 --> 数据写入csv
+<<<<<<< HEAD
             if pic_i >= 1:
                 if self.machine_predict:
                     time_now = time.time()
@@ -213,13 +244,41 @@ class Leon_detect():
                         if i_ % 10 == 0:
                             a = get_train_pre(self.csv_root_train, self.csv_root_pre)
                             print('Now Passer_Num is {}'.format(a))
+=======
+            if self.machine_predict:
+                time_now = time.time()
+                time_distance = time_now - time_start
+                if time_distance >= self.passer_note_time:
+                    i_+=1
+                    # 计算 单位时间内的总 流量
+                    self.passer_num += result_['passer_num']
+                    # 获取各类数据
+                    mes = self.wh_get()
+                    time_distance = time_distance
+                    mes.append(time_distance)
+                    mes.append(self.person_num)
+                    mes.append(self.traffic_tools_num)
+                    mes.append(self.passer_num)
+                    # print(mes)# ['多云', '17', '25', '微风', '东风', '1级', 10.094501733779907, 0, 1, 0]
+                    pre_mes = [mes,mes,mes,mes]
+                    self.pre_mes.append(mes)
+                    data_noting(self.pre_mes, self.csv_root_train)
+                    data_noting(pre_mes, self.csv_root_pre)
+                    if i_ % 10 == 0:
+                        a = get_train_pre(self.csv_root_train, self.csv_root_pre)
+                        print('Now Passer_Num is {}'.format(a))
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
             # ===============================================================================
             # |--|
             # |--|
             # =============================================================================================================================================================
             # |获取 分析器 根据原图进行神经网络分析 得到的数据 进而 标注好的图片|
             # =======================================================
+<<<<<<< HEAD
             if 1: # 关于调试的时候 此处一定要修改
+=======
+            try : # 关于调试的时候 此处一定要修改
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
                 # ==========================
                 result_ = det.feedCap(im)
                 # print(result_)
@@ -227,6 +286,7 @@ class Leon_detect():
                 # 处理好的图片
                 result = result_['frame']
                 # 所有目标的框格
+<<<<<<< HEAD
                 tar_bboxes_mes = result_['bboxes_mes'] # 【[x1, y1, x2, y2,int(track_id),cls_,car_num]】
                 for i,tar_bbox_mes in enumerate(tar_bboxes_mes):
                     box = tar_bbox_mes[0:4]
@@ -283,6 +343,11 @@ class Leon_detect():
                 tar_figures = result_['tar_figures'] # ([face, track_id],[face, track_id])
                 # 刷新老框数
                 self.old_boxes = tar_bboxes_mes
+=======
+                tar_bboxes_mes = result_['bboxes_mes'] # [[x1, y1, x2, y2,int(track_id),cls_,car_num]]
+                # 所有目标的 图片
+                tar_figures = result_['tar_figures'] # ([face, track_id],[face, track_id])
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
                 # ================================================各种函数功能==============================
                 # |--|
                 # |--|
@@ -338,13 +403,22 @@ class Leon_detect():
                             if str(mes_[4]) == str(mes):
                                 tar_bboxes_mes[i][5]= (self.obj_list[mes])
                     # print(tar_bboxes_mes) # [[470, 2, 681, 189, 1, 'car', '-->W120', '16--> Too-Fast'], [909, 183, 1191, 474, 2, 'car', '-->2N96', '26--> Too-Fast']]
+<<<<<<< HEAD
                     result = draw_new(result, tar_bboxes_mes,self.line)
+=======
+                    result = draw_new(result,tar_bboxes_mes)
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
                 # ====================================================================================================================================================
                 # |--|
                 # |--|
             # ======================
+<<<<<<< HEAD
             # except:
             #     result = im
+=======
+            except:
+                result = im
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
             # ======================
             # |--|
             # |--|
@@ -368,12 +442,21 @@ class Leon_detect():
             # =======================================================================
             # |--|
             # |--|
+<<<<<<< HEAD
         # =======================================================================
         # 关于 视频流的 一些基础设置
         cap.release()
         videoWriter.release()
         cv2.destroyAllWindows()
         # =======================================================================
+=======
+        # =======================================================================
+        # 关于 视频流的 一些基础设置
+        cap.release()
+        videoWriter.release()
+        cv2.destroyAllWindows()
+        # =======================================================================
+>>>>>>> a87c9243c9c1e03932e93b77be9ea3c13ae2ce3f
 
 
 if __name__ == '__main__':
