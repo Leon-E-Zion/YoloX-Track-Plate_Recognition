@@ -68,28 +68,20 @@ class DeepSort(object):
             box = track.to_tlwh()
             x1, y1, x2, y2 = self._tlwh_to_xyxy(box)
             cls_ = track.cls_
-            # 获取车牌号
+            track_id = "{}".format(track.track_id)
             # 对车牌 的追踪进行 锁定 ---> 这里之后好好给解释一下
             if track.cls_ == 'car' or 'track':
                 face = ori_img[y1:y2, x1:x2]
-                if  "{}".format(track.track_id) in self.plate_nums:
-                    car_num = self.plate_nums["{}".format(track.track_id)]
-                else:
-                    a = HyperLPR_plate_recognition(np.array(face))
-                    if a:
-                        confidence = a[0][1]
-                        if confidence >= 0.8 and 1:
-                            car_num = "{}".format('-->' + a[0][0][-4:])
-                            # id作为键， 车牌号作为值
-                            self.plate_nums["{}".format(track.track_id)] = "{}".format(car_num)
-                        else:
-                            car_num = "{}".format('-->' + 'Null')
-                    else:
-                        car_num = "{}".format('-->' + 'Null')
-                        # print('c={}'.format(car_num))
-            else:
-                car_num = "{}".format('-')
-            outputs.append((x1, y1, x2, y2, cls_,track.track_id, car_num))
+                a = HyperLPR_plate_recognition(np.array(face))
+                if a:
+                    confidence = a[0][1]
+                    if confidence >= 0.8:
+                        track_id = "{}".format(track.track_id) + '-->' + a[0][0][1:]
+                        self.plate_nums["{}".format(track.track_id)] = "{}".format(track_id)
+                    if "{}".format(track.track_id) in self.plate_nums:
+                        track_id = self.plate_nums["{}".format(track.track_id)]
+
+            outputs.append((x1, y1, x2, y2, cls_, track_id))
 
         return outputs
     # =============================================================================================================================================================
